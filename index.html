@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="container" onload="carregar_dados()">
+
+  <div class="container-formulario">
+    <div class="div_input" id="div_numerica">
+      <h1>Lista de Números</h1>
+      <input type="text" id="input_numeros" class="input">
+      <input placeholder="Digite um caracter para verificação" type="text" id="verifica_numeros" class="input">
+    </div>
+    <div class="div-botao">
+      <input type="button" class="botao" id="btn_num_crescente" onclick="ordenar_crescente('numero')" value="ordenar >">
+      <input type="button" class="botao" id="btn_num_decrescente" onclick="ordenar_decrescente('numero')"
+        value="ordenar <">
+      <input type="button" class="botao" id="btn_num_pesquisa" onclick="verifica_existencia('numero')" value="verificar">
+    </div>
+    <div id="resposta_numero" class="resposta"></div>
+    
+    <div class="div_input" id="div_alfabetica">
+      <h1>Lista de Letras</h1>
+      <input type="text" id="input_letras" class="input">
+      <input placeholder="Digite um caracter para verificação" type="text" id="verifica_letras" class="input">
+    </div>
+    <div class="div-botao">
+      <input type="button" class="botao" onclick="ordenar_crescente('letra')" value="ordenar >">
+      <input type="button" class="botao" onclick="ordenar_decrescente('letra')" value="ordenar <">
+      <input type="button" class="botao" onclick="verifica_existencia('letra')" value="verificar">
+    </div>
+    <div id="resposta_letra" class="resposta"></div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
